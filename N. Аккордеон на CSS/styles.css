@@ -1,0 +1,88 @@
+/* Изменять можно только этот файл. JavaScript не нужен. */
+
+.faq {
+    /* Готовые значения для оформления открытого вопроса. */
+    --faq-active-color: #5155cf;
+    --faq-active-background: #fafaff;
+    --faq-active-stripe-color: #5b5fe2;
+    --faq-active-stripe-width: 4px;
+}
+
+/* Ваш CSS ниже */
+
+.faq__question {
+    position: relative;
+    transition: color 300ms ease,
+    background-color 300ms ease;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: var(--faq-active-stripe-width);
+        background-color: var(--faq-active-stripe-color);
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 300ms ease;
+    }
+}
+
+.faq__question-text,
+.faq__number {
+    transition: color 300ms ease;
+}
+
+.faq__icon {
+    &::before,
+    &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 2px;
+        border-radius: 1px;
+        background-color: currentColor;
+        content: "";
+        transform: translate(-50%, -50%);
+        transition: transform 300ms ease;
+    }
+
+    &::after {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+}
+
+.faq__answer-clip {
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 300ms ease;
+}
+
+.faq__item[open] {
+    & > .faq__question {
+        color: var(--faq-active-color);
+        background-color: var(--faq-active-background);
+
+        &::before {
+            transform: scaleY(1);
+        }
+    }
+
+    & .faq__question-text,
+    & .faq__number {
+        color: var(--faq-active-color);
+    }
+
+    & .faq__icon::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    & .faq__icon::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+
+    & > .faq__answer-clip {
+        grid-template-rows: 1fr;
+    }
+}

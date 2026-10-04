@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Задержки виджетов</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+
+        .chart {
+            box-sizing: border-box;
+            display: block;
+            max-width: 520px;
+            border: 1px solid #d0d7de;
+            background: #f6f8fa;
+        }
+
+        .chart rect {
+            fill: #7ee787;
+            stroke: #24292f;
+        }
+
+        .chart text {
+            font-size: 12px;
+            fill: #24292f;
+            text-anchor: middle;
+        }
+    </style>
+    <script type="text/javascript">
+        function solution(block) {
+            // your code here
+            return 0;
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const chart = document.querySelector('#latency-chart');
+            const result = solution(chart);
+            document.querySelector('#result').innerHTML = `Максимальный разрыв задержек = ${result} мс`;
+        });
+    </script>
+</head>
+<body>
+<div id="root">
+    <h1>Задержки отрисовки виджетов</h1>
+    <svg id="latency-chart" class="chart" width="480" height="220" viewBox="0 0 480 220">
+        <rect x="30" y="170" width="36" height="20" data-value="20"><title>20 мс</title></rect>
+        <rect x="84" y="40" width="36" height="150" data-value="150"><title>150 мс</title></rect>
+        <rect x="138" y="130" width="36" height="60" data-value="60"><title>60 мс</title></rect>
+        <rect x="192" y="150" width="36" height="40" data-value="40"><title>40 мс</title></rect>
+        <rect x="246" y="110" width="36" height="80" data-value="80"><title>80 мс</title></rect>
+        <rect x="300" y="70" width="36" height="120" data-value="120"><title>120 мс</title></rect>
+        <rect x="354" y="90" width="36" height="100" data-value="100"><title>100 мс</title></rect>
+        <rect x="408" y="140" width="36" height="50" data-value="50"><title>50 мс</title></rect>
+
+        <text x="48" y="208">20</text>
+        <text x="102" y="208">150</text>
+        <text x="156" y="208">60</text>
+        <text x="210" y="208">40</text>
+        <text x="264" y="208">80</text>
+        <text x="318" y="208">120</text>
+        <text x="372" y="208">100</text>
+        <text x="426" y="208">50</text>
+    </svg>
+    <h2 id="result"></h2>
+</div>
+</body>
+</html>

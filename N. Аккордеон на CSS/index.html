@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Частые вопросы</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="support-card" aria-labelledby="faq-title">
+      <header class="support-card__header">
+        <p class="support-card__eyebrow">ПЕРВЫЙ РАБОЧИЙ ДЕНЬ</p>
+        <h1 class="support-card__title" id="faq-title">Частые вопросы</h1>
+        <p class="support-card__description">
+          Коротко о стажировке, рабочем процессе и поддержке команды.
+        </p>
+      </header>
+
+      <div class="faq" data-testid="faq">
+        <details class="faq__item" name="internship-faq" open data-testid="faq-item">
+          <summary class="faq__question" data-testid="faq-question">
+            <span class="faq__number" aria-hidden="true">01</span>
+            <span class="faq__question-text">Как проходит первый день стажировки?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer-clip">
+            <div class="faq__answer-inner">
+              <div class="faq__answer" data-testid="faq-answer">
+                <p>
+                  Утром команда проведёт короткий онбординг, поможет настроить окружение
+                  и познакомит с проектом. Затем вы получите первую небольшую задачу.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item" name="internship-faq" data-testid="faq-item">
+          <summary class="faq__question" data-testid="faq-question">
+            <span class="faq__number" aria-hidden="true">02</span>
+            <span class="faq__question-text">Можно ли работать удалённо?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer-clip">
+            <div class="faq__answer-inner">
+              <div class="faq__answer" data-testid="faq-answer">
+                <p>
+                  Да. Формат зависит от команды: часть встреч проходит синхронно,
+                  а остальное время можно планировать самостоятельно.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item" name="internship-faq" data-testid="faq-item">
+          <summary class="faq__question" data-testid="faq-question">
+            <span class="faq__number" aria-hidden="true">03</span>
+            <span class="faq__question-text">
+              Что делать, если задача занимает больше времени, чем ожидалось?
+            </span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer-clip">
+            <div class="faq__answer-inner">
+              <div class="faq__answer" data-testid="faq-answer">
+                <p>
+                  Расскажите наставнику, что уже сделано, где возникла сложность
+                  и какие варианты вы проверили.
+                </p>
+                <p>
+                  Вместе вы сможете уточнить приоритет, сократить задачу или выбрать
+                  другой подход. Прозрачный процесс важнее идеального результата.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <details class="faq__item" name="internship-faq" data-testid="faq-item">
+          <summary class="faq__question" data-testid="faq-question">
+            <span class="faq__number" aria-hidden="true">04</span>
+            <span class="faq__question-text">Будет ли code review?</span>
+            <span class="faq__icon" aria-hidden="true"></span>
+          </summary>
+          <div class="faq__answer-clip">
+            <div class="faq__answer-inner">
+              <div class="faq__answer" data-testid="faq-answer">
+                <p>
+                  Да. Вы получите комментарии, сможете задать вопросы и при
+                  необходимости обновить решение.
+                </p>
+              </div>
+            </div>
+          </div>
+        </details>
+      </div>
+
+      <footer class="support-card__footer">
+        <span>Не нашли ответ?</span>
+        <a href="mailto:mentor@example.com">Напишите наставнику</a>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

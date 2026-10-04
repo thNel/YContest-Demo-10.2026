@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Календарь из хаоса</title>
+<style>
+    /* Хром страницы — фиксированная геометрия (задаётся шаблоном, участник её не меняет):
+       шапка страницы 100px + отступы main по 20px + календарь 760px = страница ровно 900px в высоту. */
+    body {
+        margin: 0;
+        background: #f5f6f8;
+        font: 14px/1.4 -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        color: #202124;
+    }
+    .page-header {
+        box-sizing: border-box;
+        height: 100px;
+        padding: 22px 20px 0;
+        background: #fff;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .page-header h1 {
+        margin: 0;
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 600;
+    }
+    .page-header p {
+        margin: 6px 0 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #5f6368;
+    }
+    main {
+        padding: 20px;
+    }
+    /* Содержимое #calendar не стилизуется шаблоном — его целиком строит скрипт решения. */
+</style>
+</head>
+<body>
+<header class="page-header">
+    <h1>Календарь из хаоса</h1>
+    <p>События из всех источников — в одном аккуратном календаре.</p>
+</header>
+<main>
+    <div id="calendar"></div>
+</main>
+<script>window.INPUT = {"startDate":"2026-04-06","days":7,"events":[{"id":"e1","title":"Планёрка","date":"2026-04-06","start":"9:00","end":"10:00"},{"id":"e2","title":"Пересечение","date":"2026-04-06","start":"09.30","end":"10.30"},{"id":"e3","title":"Впритык","date":"2026-04-06","start":"10:30","end":"11:00"},{"id":"e4","title":"Длительность","date":"2026-04-07","start":"11.30 AM","duration":"90 мин"},{"id":"e5","title":"Опечатки","date":"2026-04-08","start":"1O:30","end":"14;30"},{"id":"e6","title":"Вечер","date":"2026-04-09","start":"7.15p.m.","end":"8:00 PM"},{"id":"e7","title":"HTML <b>текст</b>","date":"2026-04-10","start":"9 : 00","end":"9:15"},{"id":"bad-hour","title":"Час","date":"2026-04-06","start":"26:00","end":"27:00"},{"id":"bad-minute","title":"Минута","date":"2026-04-06","start":"9:60","end":"10:00"},{"id":"bad-time","title":"Текст","date":"2026-04-06","start":"полдень","end":"13:00"},{"id":"bad-duration","title":"Длительность","date":"2026-04-06","start":"9:00","duration":"90 min"},{"id":"bad-date","title":"Дата","date":"2026-04-13","start":"9:00","end":"10:00"},{"id":"bad-order","title":"Порядок","date":"2026-04-06","start":"10:00","end":"9:00"},{"id":"zero-duration","title":"Нулевая длительность","date":"2026-04-06","start":"10:00","duration":"0 мин"}]};</script>
+<script src="solution.js"></script>
+<pre id="test-output" style="margin:16px 0;padding:12px;background:#fff;font:12px/1.5 Consolas,monospace;white-space:pre-wrap"></pre>
+<script>document.getElementById('test-output').textContent = 'ERRORS: ' + JSON.stringify(window.ERRORS, null, 2);</script>
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+/* Изменять можно только этот файл. JavaScript не нужен. */
+
+.faq {
+  /* Готовые значения для оформления открытого вопроса. */
+  --faq-active-color: #5155cf;
+  --faq-active-background: #fafaff;
+  --faq-active-stripe-color: #5b5fe2;
+  --faq-active-stripe-width: 4px;
+}
+
+/* Ваш CSS ниже */
